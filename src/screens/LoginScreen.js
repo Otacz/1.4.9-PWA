@@ -1,11 +1,41 @@
-
-import React, { useState, useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { UserContext } from "./../context/UserContext";
 
 const LoginScreen = () => {
   const [name, setName] = useState("");
   const [pass, setPass] = useState("");
   const { setUser, setIsAdmin } = useContext(UserContext);
+
+  const [deferredPrompt, setDeferredPrompt] = useState(null);
+  const [showInstallButton, setShowInstallButton] = useState(false);
+
+  useEffect(() => {
+    const handleBeforeInstallPrompt = (e) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+      setShowInstallButton(true);
+    };
+
+    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+
+    return () => {
+      window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+    };
+  }, []);
+
+  const handleInstallClick = async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === "accepted") {
+        console.log("App installed");
+      } else {
+        console.log("App installation declined");
+      }
+      setDeferredPrompt(null);
+      setShowInstallButton(false);
+    }
+  };
 
   const handleLogin = () => {
     if (!name) return;
