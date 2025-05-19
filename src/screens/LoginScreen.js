@@ -16,25 +16,19 @@ const LoginScreen = () => {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '100vh',
+      fontFamily: 'Georgia, serif'
+    }}>
       {showInstallButton && (
         <button onClick={handleInstallClick} style={{ marginTop: '1rem', padding: '0.5rem', background: '#00ffff', border: 'none', borderRadius: '4px', color: '#000' }}>
           Nainstalovat GeriApp
         </button>
       )}
-
-      {showInstallButton && (
-        <button onClick={handleInstallClick} style={{ marginTop: "1rem", padding: "0.5rem", background: "#00ffff", border: "none", borderRadius: "4px", color: "#000" }}>
-          Nainstalovat GeriApp
-        </button>
-      )}
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      height: "100vh",
-      fontFamily: "Georgia, serif"
-    }}>
       <h2 style={{ marginBottom: 20 }}>Přihlášení do GeriApp Alfa</h2>
       <input
         type="text"
@@ -53,18 +47,17 @@ const LoginScreen = () => {
       <button
         onClick={handleLogin}
         style={{
-          padding: "10px 20px",
+          padding: '10px 20px',
           fontSize: 16,
-          backgroundColor: "#0a369d",
-          color: "white",
-          border: "none",
+          backgroundColor: '#0a369d',
+          color: 'white',
+          border: 'none',
           borderRadius: 4,
-          cursor: "pointer"
+          cursor: 'pointer'
         }}
       >
         Přihlásit se
       </button>
-    </div>
     </div>
   );
 };
