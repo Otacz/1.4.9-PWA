@@ -16,13 +16,12 @@ const LoginScreen = () => {
   };
 
   return (
-{showInstallButton && (
-  <button onClick={handleInstallClick} style={{ marginTop: '1rem', padding: '0.5rem', background: '#00ffff', border: 'none', borderRadius: '4px', color: '#000' }}>
-    Nainstalovat GeriApp
-  </button>
-)}
 
-
+      {showInstallButton && (
+        <button onClick={handleInstallClick} style={{ marginTop: "1rem", padding: "0.5rem", background: "#00ffff", border: "none", borderRadius: "4px", color: "#000" }}>
+          Nainstalovat GeriApp
+        </button>
+      )}
     <div style={{
       display: "flex",
       flexDirection: "column",
