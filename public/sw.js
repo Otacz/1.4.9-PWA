@@ -1,13 +1,7 @@
-
-// GeriApp Service Worker (PWA light mode)
 self.addEventListener('install', event => {
-  self.skipWaiting();
+  console.log('Service Worker installing.');
 });
 
 self.addEventListener('activate', event => {
-  console.log('Service worker activated.');
-});
-
-self.addEventListener('fetch', event => {
-  // Default fetch handler
+  console.log('Service Worker activating.');
 });
