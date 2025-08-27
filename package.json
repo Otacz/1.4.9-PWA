@@ -1,6 +1,6 @@
 {
   "name": "geriapp-voice-image-gpt4turbo",
-  "version": "1.0.0",
+  "version": "1.4.9",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",

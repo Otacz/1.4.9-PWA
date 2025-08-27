@@ -1,0 +1,10 @@
+CO JEŠTĚ CHYBÍ PRO PLNÝ UPGRADE NA NEO FUTURE (v1.5.0-final):
+
+1. Responsivní Sidebar (mobilní rozbalovací menu)
+2. Nový styl pro všechny admin nástroje (Tools) – sjednotit tmavý vzhled a neon efekty
+3. Refaktor stylů do globálních proměnných – lepší škálování
+4. Přidat stránku /about s verzí a odkazy
+
+Verze: GeriApp v1.5.0-pre
+Build: 001
+Autor: Gerišer company s.r.o.
